@@ -49,8 +49,11 @@
             this.btnAddDiscount = new System.Windows.Forms.Button();
             this.dgvDiscount = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.button6 = new System.Windows.Forms.Button();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -63,9 +66,6 @@
             this.txtMasterFilesJSONPath = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.pnlHeaderTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -294,6 +294,21 @@
             this.tabPage5.Text = "Tax";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.DarkCyan;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 8F);
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(6, 406);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(191, 37);
+            this.button6.TabIndex = 41;
+            this.button6.Text = "Create New";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.button3);
@@ -305,6 +320,21 @@
             this.tabPage6.Text = "Unit";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.DarkCyan;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 8F);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(6, 406);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(191, 37);
+            this.button3.TabIndex = 40;
+            this.button3.Text = "Create New";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.button4);
@@ -315,6 +345,21 @@
             this.tabPage7.TabIndex = 3;
             this.tabPage7.Text = "Term";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DarkCyan;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 8F);
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(6, 406);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(191, 37);
+            this.button4.TabIndex = 40;
+            this.button4.Text = "Create New";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // tabPage3
             // 
@@ -448,51 +493,6 @@
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.DarkCyan;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 8F);
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(6, 406);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(191, 37);
-            this.button6.TabIndex = 41;
-            this.button6.Text = "Create New";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.DarkCyan;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 8F);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(6, 406);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(191, 37);
-            this.button3.TabIndex = 40;
-            this.button3.Text = "Create New";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.DarkCyan;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 8F);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(6, 406);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(191, 37);
-            this.button4.TabIndex = 40;
-            this.button4.Text = "Create New";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -505,7 +505,9 @@
             this.Controls.Add(this.pnlHeaderTitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1027, 700);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1027, 700);
             this.Name = "SettingsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings";
