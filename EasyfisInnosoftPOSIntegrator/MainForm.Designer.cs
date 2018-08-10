@@ -30,19 +30,27 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnlHeaderTitle = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.picEasyfisLogo = new System.Windows.Forms.PictureBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabHome = new System.Windows.Forms.TabPage();
+            this.btnHide = new System.Windows.Forms.Button();
             this.btnIntegrate = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.lblNotificationLabel = new System.Windows.Forms.Label();
             this.picIntegrateLoading = new System.Windows.Forms.PictureBox();
             this.tabJSONFilesPath = new System.Windows.Forms.TabPage();
+            this.button13 = new System.Windows.Forms.Button();
+            this.grdActivityLog = new System.Windows.Forms.DataGridView();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -61,26 +69,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtMasterFilesJSONPath = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.grdActivityLog = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button12 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.FileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FileNotificationMessage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FileView = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.btnHide = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
             this.pnlHeaderTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEasyfisLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -90,9 +90,8 @@
             this.tabHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIntegrateLoading)).BeginInit();
             this.tabJSONFilesPath.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdActivityLog)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeaderTitle
@@ -108,6 +107,27 @@
             this.pnlHeaderTitle.Name = "pnlHeaderTitle";
             this.pnlHeaderTitle.Size = new System.Drawing.Size(1178, 68);
             this.pnlHeaderTitle.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(999, 21);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(137, 23);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Administrator";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(951, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -144,8 +164,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.button15);
-            this.splitContainer1.Panel2.Controls.Add(this.button14);
-            this.splitContainer1.Panel2.Controls.Add(this.button1);
+            this.splitContainer1.Panel2.Controls.Add(this.btnLogout);
+            this.splitContainer1.Panel2.Controls.Add(this.btnSettings);
             this.splitContainer1.Size = new System.Drawing.Size(1178, 547);
             this.splitContainer1.SplitterDistance = 996;
             this.splitContainer1.TabIndex = 1;
@@ -181,6 +201,21 @@
             this.tabHome.Text = "Integrate";
             this.tabHome.UseVisualStyleBackColor = true;
             // 
+            // btnHide
+            // 
+            this.btnHide.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnHide.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnHide.FlatAppearance.BorderSize = 0;
+            this.btnHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHide.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHide.Location = new System.Drawing.Point(489, 432);
+            this.btnHide.Name = "btnHide";
+            this.btnHide.Size = new System.Drawing.Size(145, 51);
+            this.btnHide.TabIndex = 6;
+            this.btnHide.Text = "Hide";
+            this.btnHide.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHide.UseVisualStyleBackColor = false;
+            // 
             // btnIntegrate
             // 
             this.btnIntegrate.BackColor = System.Drawing.Color.RoyalBlue;
@@ -193,7 +228,7 @@
             this.btnIntegrate.Name = "btnIntegrate";
             this.btnIntegrate.Size = new System.Drawing.Size(731, 128);
             this.btnIntegrate.TabIndex = 5;
-            this.btnIntegrate.Text = "Integrate";
+            this.btnIntegrate.Text = "INTEGRATE";
             this.btnIntegrate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnIntegrate.UseVisualStyleBackColor = false;
             this.btnIntegrate.Click += new System.EventHandler(this.btnIntegrate_Click);
@@ -248,6 +283,34 @@
             this.tabJSONFilesPath.TabIndex = 1;
             this.tabJSONFilesPath.Text = "Activity Log";
             this.tabJSONFilesPath.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button13.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Location = new System.Drawing.Point(6, 453);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(168, 51);
+            this.button13.TabIndex = 4;
+            this.button13.Text = "Refresh";
+            this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button13.UseVisualStyleBackColor = false;
+            // 
+            // grdActivityLog
+            // 
+            this.grdActivityLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdActivityLog.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FileName,
+            this.FilePath,
+            this.FileNotificationMessage});
+            this.grdActivityLog.Location = new System.Drawing.Point(6, 6);
+            this.grdActivityLog.Name = "grdActivityLog";
+            this.grdActivityLog.RowTemplate.Height = 24;
+            this.grdActivityLog.Size = new System.Drawing.Size(968, 441);
+            this.grdActivityLog.TabIndex = 3;
             // 
             // button11
             // 
@@ -309,6 +372,52 @@
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "JSON File Path";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.IndianRed;
+            this.button12.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.Color.White;
+            this.button12.Location = new System.Drawing.Point(6, 453);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(229, 51);
+            this.button12.TabIndex = 37;
+            this.button12.Text = "Delete All JSON Files";
+            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button12.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(632, 453);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(168, 51);
+            this.button9.TabIndex = 36;
+            this.button9.Text = "Save";
+            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(806, 453);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(168, 51);
+            this.button8.TabIndex = 1;
+            this.button8.Text = "Edit";
+            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button8.UseVisualStyleBackColor = false;
             // 
             // button7
             // 
@@ -466,21 +575,55 @@
             this.txtMasterFilesJSONPath.TabIndex = 18;
             this.txtMasterFilesJSONPath.Text = "Master Files";
             // 
-            // button1
+            // button15
             // 
-            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(3, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 102);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "  Settings";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.button15.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button15.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button15.Location = new System.Drawing.Point(3, 436);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(172, 51);
+            this.button15.TabIndex = 2;
+            this.button15.Text = "Switch Account";
+            this.button15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button15.UseVisualStyleBackColor = false;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.IndianRed;
+            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Location = new System.Drawing.Point(3, 493);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(172, 51);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSettings.Location = new System.Drawing.Point(3, 30);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(172, 102);
+            this.btnSettings.TabIndex = 0;
+            this.btnSettings.Text = "  Settings";
+            this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSettings.UseVisualStyleBackColor = false;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // label3
             // 
@@ -514,86 +657,15 @@
             this.label10.Text = "001";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button8
+            // label11
             // 
-            this.button8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(806, 453);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(168, 51);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "Edit";
-            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(632, 453);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(168, 51);
-            this.button9.TabIndex = 36;
-            this.button9.Text = "Save";
-            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // grdActivityLog
-            // 
-            this.grdActivityLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdActivityLog.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.FileName,
-            this.FilePath,
-            this.FileNotificationMessage,
-            this.FileView});
-            this.grdActivityLog.Location = new System.Drawing.Point(6, 6);
-            this.grdActivityLog.Name = "grdActivityLog";
-            this.grdActivityLog.RowTemplate.Height = 24;
-            this.grdActivityLog.Size = new System.Drawing.Size(968, 441);
-            this.grdActivityLog.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(951, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(999, 21);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(137, 23);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Administrator";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.IndianRed;
-            this.button12.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(6, 453);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(229, 51);
-            this.button12.TabIndex = 37;
-            this.button12.Text = "Delete All JSON Files";
-            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button12.UseVisualStyleBackColor = false;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(136, 677);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(94, 20);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Connected";
             // 
             // FileName
             // 
@@ -609,88 +681,6 @@
             // 
             this.FileNotificationMessage.HeaderText = "Message";
             this.FileNotificationMessage.Name = "FileNotificationMessage";
-            // 
-            // FileView
-            // 
-            this.FileView.DataPropertyName = "View";
-            this.FileView.HeaderText = "View";
-            this.FileView.Name = "FileView";
-            this.FileView.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.FileView.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.FileView.Text = "View";
-            this.FileView.ToolTipText = "View";
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button13.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(6, 453);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(168, 51);
-            this.button13.TabIndex = 4;
-            this.button13.Text = "Refresh";
-            this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button13.UseVisualStyleBackColor = false;
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.IndianRed;
-            this.button14.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(3, 493);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(172, 51);
-            this.button14.TabIndex = 1;
-            this.button14.Text = "Logout";
-            this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button14.UseVisualStyleBackColor = false;
-            // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button15.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button15.Location = new System.Drawing.Point(3, 436);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(172, 51);
-            this.button15.TabIndex = 2;
-            this.button15.Text = "Switch Account";
-            this.button15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button15.UseVisualStyleBackColor = false;
-            // 
-            // btnHide
-            // 
-            this.btnHide.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnHide.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnHide.FlatAppearance.BorderSize = 0;
-            this.btnHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHide.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHide.Location = new System.Drawing.Point(489, 432);
-            this.btnHide.Name = "btnHide";
-            this.btnHide.Size = new System.Drawing.Size(145, 51);
-            this.btnHide.TabIndex = 6;
-            this.btnHide.Text = "Hide";
-            this.btnHide.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHide.UseVisualStyleBackColor = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(136, 677);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(94, 20);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Connected";
             // 
             // MainForm
             // 
@@ -710,9 +700,12 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1200, 750);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Easyfis iPOS Integrator";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.pnlHeaderTitle.ResumeLayout(false);
             this.pnlHeaderTitle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEasyfisLogo)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -723,10 +716,9 @@
             this.tabHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIntegrateLoading)).EndInit();
             this.tabJSONFilesPath.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdActivityLog)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdActivityLog)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -742,7 +734,7 @@
         private System.Windows.Forms.TabPage tabHome;
         private System.Windows.Forms.TabPage tabJSONFilesPath;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.PictureBox picIntegrateLoading;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button button7;
@@ -776,14 +768,13 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnHide;
+        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridViewTextBoxColumn FileName;
         private System.Windows.Forms.DataGridViewTextBoxColumn FilePath;
         private System.Windows.Forms.DataGridViewTextBoxColumn FileNotificationMessage;
-        private System.Windows.Forms.DataGridViewButtonColumn FileView;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button btnHide;
-        private System.Windows.Forms.Label label11;
     }
 }
