@@ -58,6 +58,10 @@
     <Compile Include="DiscountDetailForm.Designer.cs">
       <DependentUpon>DiscountDetailForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\MstDiscount.cs" />
+    <Compile Include="Entities\MstTax.cs" />
+    <Compile Include="Entities\MstTerm.cs" />
+    <Compile Include="Entities\MstUnit.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +92,36 @@
     <Compile Include="SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaxDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaxDetailForm.Designer.cs">
+      <DependentUpon>TaxDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TermDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TermDetailForm.Designer.cs">
+      <DependentUpon>TermDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnitDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnitDetailForm.Designer.cs">
+      <DependentUpon>UnitDetailForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="TaxDetailForm.resx">
+      <DependentUpon>TaxDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TermDetailForm.resx">
+      <DependentUpon>TermDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnitDetailForm.resx">
+      <DependentUpon>UnitDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ActivityLog.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Data\pos13db.dbml.layout">
       <DependentUpon>pos13db.dbml</DependentUpon>
     </None>
@@ -116,7 +150,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="settings.json" />
+    <None Include="Settings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -125,6 +161,7 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\font-icons\term.png" />
     <Content Include="Images\font-icons\discount.png" />
     <Content Include="Images\font-icons\blocks.gif" />
     <Content Include="Images\font-icons\cube.gif" />
@@ -135,7 +172,9 @@
     <Content Include="Images\font-icons\ripplie.gif" />
     <Content Include="Images\font-icons\manage.png" />
     <Content Include="Images\font-icons\settings.png" />
+    <Content Include="Images\font-icons\tax.png" />
     <Content Include="Images\icon\easyfisFabIcon.ico" />
+    <Content Include="Images\font-icons\unit.png" />
     <Content Include="Images\logo\easyfisFabLogo.png" />
     <Content Include="Images\font-icons\user.png" />
   </ItemGroup>

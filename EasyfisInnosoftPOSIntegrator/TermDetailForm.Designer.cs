@@ -1,6 +1,6 @@
 ﻿namespace EasyfisInnosoftPOSIntegrator
 {
-    partial class LoginForm
+    partial class TermDetailForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TermDetailForm));
             this.pnlHeaderTitle = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.cboMapTerm = new System.Windows.Forms.ComboBox();
+            this.cboTerm = new System.Windows.Forms.ComboBox();
             this.btnCloseLogin = new System.Windows.Forms.Button();
+            this.btnSaveDiscount = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.pnlHeaderTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,8 +51,8 @@
             this.pnlHeaderTitle.Controls.Add(this.label1);
             this.pnlHeaderTitle.Location = new System.Drawing.Point(3, 0);
             this.pnlHeaderTitle.Name = "pnlHeaderTitle";
-            this.pnlHeaderTitle.Size = new System.Drawing.Size(581, 57);
-            this.pnlHeaderTitle.TabIndex = 2;
+            this.pnlHeaderTitle.Size = new System.Drawing.Size(585, 57);
+            this.pnlHeaderTitle.TabIndex = 66;
             // 
             // pictureBox1
             // 
@@ -71,65 +71,27 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(50, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 37);
+            this.label1.Size = new System.Drawing.Size(87, 37);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Login";
+            this.label1.Text = "Term";
             // 
-            // label8
+            // cboMapTerm
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label8.Location = new System.Drawing.Point(12, 93);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 21);
-            this.label8.TabIndex = 27;
-            this.label8.Text = "Username";
+            this.cboMapTerm.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cboMapTerm.FormattingEnabled = true;
+            this.cboMapTerm.Location = new System.Drawing.Point(167, 124);
+            this.cboMapTerm.Name = "cboMapTerm";
+            this.cboMapTerm.Size = new System.Drawing.Size(403, 29);
+            this.cboMapTerm.TabIndex = 65;
             // 
-            // txtUsername
+            // cboTerm
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.txtUsername.Location = new System.Drawing.Point(167, 90);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(403, 28);
-            this.txtUsername.TabIndex = 30;
-            this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsername_KeyDown);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label2.Location = new System.Drawing.Point(12, 127);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 21);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "Password";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.txtPassword.Location = new System.Drawing.Point(167, 124);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '•';
-            this.txtPassword.Size = new System.Drawing.Size(403, 28);
-            this.txtPassword.TabIndex = 32;
-            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(228, 189);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(168, 51);
-            this.btnLogin.TabIndex = 42;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.cboTerm.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cboTerm.FormattingEnabled = true;
+            this.cboTerm.Location = new System.Drawing.Point(167, 90);
+            this.cboTerm.Name = "cboTerm";
+            this.cboTerm.Size = new System.Drawing.Size(403, 29);
+            this.cboTerm.TabIndex = 64;
             // 
             // btnCloseLogin
             // 
@@ -142,34 +104,70 @@
             this.btnCloseLogin.Location = new System.Drawing.Point(402, 189);
             this.btnCloseLogin.Name = "btnCloseLogin";
             this.btnCloseLogin.Size = new System.Drawing.Size(168, 51);
-            this.btnCloseLogin.TabIndex = 43;
+            this.btnCloseLogin.TabIndex = 63;
             this.btnCloseLogin.Text = "Close";
             this.btnCloseLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCloseLogin.UseVisualStyleBackColor = false;
             this.btnCloseLogin.Click += new System.EventHandler(this.btnCloseLogin_Click);
             // 
-            // LoginForm
+            // btnSaveDiscount
+            // 
+            this.btnSaveDiscount.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSaveDiscount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSaveDiscount.FlatAppearance.BorderSize = 0;
+            this.btnSaveDiscount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveDiscount.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveDiscount.ForeColor = System.Drawing.Color.White;
+            this.btnSaveDiscount.Location = new System.Drawing.Point(228, 189);
+            this.btnSaveDiscount.Name = "btnSaveDiscount";
+            this.btnSaveDiscount.Size = new System.Drawing.Size(168, 51);
+            this.btnSaveDiscount.TabIndex = 62;
+            this.btnSaveDiscount.Text = "Save";
+            this.btnSaveDiscount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSaveDiscount.UseVisualStyleBackColor = false;
+            this.btnSaveDiscount.Click += new System.EventHandler(this.btnSaveDiscount_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label2.Location = new System.Drawing.Point(12, 127);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 21);
+            this.label2.TabIndex = 61;
+            this.label2.Text = "Map Term";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label8.Location = new System.Drawing.Point(12, 93);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(49, 21);
+            this.label8.TabIndex = 60;
+            this.label8.Text = "Term";
+            // 
+            // TermDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(582, 253);
-            this.Controls.Add(this.btnCloseLogin);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.pnlHeaderTitle);
+            this.Controls.Add(this.cboMapTerm);
+            this.Controls.Add(this.cboTerm);
+            this.Controls.Add(this.btnCloseLogin);
+            this.Controls.Add(this.btnSaveDiscount);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label8);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(600, 300);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(600, 300);
-            this.Name = "LoginForm";
+            this.Name = "TermDetailForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm_FormClosing);
+            this.Text = "Term Detail";
             this.pnlHeaderTitle.ResumeLayout(false);
             this.pnlHeaderTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -183,11 +181,11 @@
         private System.Windows.Forms.Panel pnlHeaderTitle;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.ComboBox cboMapTerm;
+        private System.Windows.Forms.ComboBox cboTerm;
         private System.Windows.Forms.Button btnCloseLogin;
+        private System.Windows.Forms.Button btnSaveDiscount;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label8;
     }
 }

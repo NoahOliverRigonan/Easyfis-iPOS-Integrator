@@ -22,86 +22,177 @@ namespace EasyfisInnosoftPOSIntegrator
         {
             InitializeComponent();
             CreateDiscountDataGrid();
+            CreateTaxDataGrid();
+            CreateUnitDataGrid();
+            CreateTermDataGrid();
         }
 
         public void CreateDiscountDataGrid()
         {
             try
             {
+                btnDeleteDiscount.CellTemplate.Style.BackColor = Color.IndianRed;
+                btnDeleteDiscount.CellTemplate.Style.ForeColor = Color.White;
+
                 dgvDiscount.AutoGenerateColumns = false;
-                dgvDiscount.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-                DataGridViewTextBoxColumn dataGridViewTextBoxColumnDiscount = new DataGridViewTextBoxColumn
-                {
-                    HeaderText = "Discount",
-                    DataPropertyName = "Discount"
-                };
-
-                DataGridViewComboBoxColumn dataGridViewComboBoxColumnDiscount = new DataGridViewComboBoxColumn
-                {
-                    HeaderText = "Map Discount",
-                    DataPropertyName = "MapDiscount",
-                    DataSource = CreateComboBoxDiscount()
-                };
-
-                DataTable dataTable = new DataTable();
-                dataTable.Columns.Add("Discount", typeof(String));
-                dataTable.Columns.Add("Map Discount", typeof(String));
-
-                var discounts = from d in db.MstDiscounts select d;
-                if (discounts.Any())
-                {
-                    var rowIndex = 0;
-                    foreach (var discount in discounts)
-                    {
-                        if (rowIndex > 0)
-                        {
-                            dataTable.Rows.Add(new object[] { discount.Discount, "Zero Discount" });
-                        }
-
-                        rowIndex += 1;
-                    }
-                }
-
-                dgvDiscount.DataSource = dataTable;
-                dgvDiscount.Columns.AddRange(dataGridViewTextBoxColumnDiscount, dataGridViewComboBoxColumnDiscount);
-                dgvDiscount.Columns[0].ReadOnly = true;
+                dgvDiscount.Columns[0].DefaultCellStyle.SelectionBackColor = Color.IndianRed;
+                dgvDiscount.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvDiscount.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        public List<String> CreateComboBoxDiscount()
+        public void RefreshDiscountDataGrid(String discount, String MapDiscount)
         {
-            List<String> listDiscounts = new List<String>();
-
-            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create("http://localhost:2651/api/innosoftPOSIntegration/discount/list");
-            httpWebRequest.ContentType = "application/json";
-            httpWebRequest.Method = "GET";
-
-            HttpWebResponse httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-            using (StreamReader streamReader = new StreamReader(httpResponse.GetResponseStream()))
-            {
-                var result = streamReader.ReadToEnd();
-
-                JavaScriptSerializer javaScriptSerializer = new JavaScriptSerializer();
-                List<String> discounts = (List<String>)javaScriptSerializer.Deserialize(result, typeof(List<String>));
-
-                foreach (var discount in discounts)
-                {
-                    listDiscounts.Add(discount);
-                }
-            }
-
-            return listDiscounts.ToList();
+            dgvDiscount.Rows.Add("Delete", discount, MapDiscount);
+            dgvDiscount.Refresh();
         }
 
         private void btnAddDiscount_Click(object sender, EventArgs e)
         {
-            DiscountDetailForm discountDetailForm = new DiscountDetailForm();
+            DiscountDetailForm discountDetailForm = new DiscountDetailForm(this);
             discountDetailForm.ShowDialog();
+        }
+
+        private void dgvDiscount_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+                DialogResult deleteDialogResult = MessageBox.Show("Delete Discount?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (deleteDialogResult == DialogResult.Yes)
+                {
+                    dgvDiscount.Rows.RemoveAt(e.RowIndex);
+                }
+            }
+        }
+
+        public void CreateTaxDataGrid()
+        {
+            try
+            {
+                btnDeleteTax.CellTemplate.Style.BackColor = Color.IndianRed;
+                btnDeleteTax.CellTemplate.Style.ForeColor = Color.White;
+
+                dgvTax.AutoGenerateColumns = false;
+                dgvTax.Columns[0].DefaultCellStyle.SelectionBackColor = Color.IndianRed;
+                dgvTax.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvTax.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void RefreshTaxDataGrid(String tax, String MapTax)
+        {
+            dgvTax.Rows.Add("Delete", tax, MapTax);
+            dgvTax.Refresh();
+        }
+
+        private void btnAddTax_Click(object sender, EventArgs e)
+        {
+            TaxDetailForm taxDetailForm = new TaxDetailForm(this);
+            taxDetailForm.ShowDialog();
+        }
+
+        private void dgvTax_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+                DialogResult deleteDialogResult = MessageBox.Show("Delete Tax?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (deleteDialogResult == DialogResult.Yes)
+                {
+                    dgvTax.Rows.RemoveAt(e.RowIndex);
+                }
+            }
+        }
+
+        public void CreateUnitDataGrid()
+        {
+            try
+            {
+                btnDeleteUnit.CellTemplate.Style.BackColor = Color.IndianRed;
+                btnDeleteUnit.CellTemplate.Style.ForeColor = Color.White;
+
+                dgvUnit.AutoGenerateColumns = false;
+                dgvUnit.Columns[0].DefaultCellStyle.SelectionBackColor = Color.IndianRed;
+                dgvUnit.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvUnit.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void RefreshUnitDataGrid(String unit, String MapUnit)
+        {
+            dgvUnit.Rows.Add("Delete", unit, MapUnit);
+            dgvUnit.Refresh();
+        }
+
+        private void btnAddUnit_Click(object sender, EventArgs e)
+        {
+            UnitDetailForm unitDetailForm = new UnitDetailForm(this);
+            unitDetailForm.ShowDialog();
+        }
+
+        private void dgvUnit_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+                DialogResult deleteDialogResult = MessageBox.Show("Delete Unit?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (deleteDialogResult == DialogResult.Yes)
+                {
+                    dgvUnit.Rows.RemoveAt(e.RowIndex);
+                }
+            }
+        }
+
+        public void CreateTermDataGrid()
+        {
+            try
+            {
+                btnDeleteTerm.CellTemplate.Style.BackColor = Color.IndianRed;
+                btnDeleteTerm.CellTemplate.Style.ForeColor = Color.White;
+
+                dgvTerm.AutoGenerateColumns = false;
+                dgvTerm.Columns[0].DefaultCellStyle.SelectionBackColor = Color.IndianRed;
+                dgvTerm.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvTerm.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void RefreshTermDataGrid(String term, String MapTerm)
+        {
+            dgvTerm.Rows.Add("Delete", term, MapTerm);
+            dgvTerm.Refresh();
+        }
+
+        private void btnAddTerm_Click(object sender, EventArgs e)
+        {
+            TermDetailForm termDetailForm = new TermDetailForm(this);
+            termDetailForm.ShowDialog();
+        }
+
+        private void dgvTerm_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+                DialogResult deleteDialogResult = MessageBox.Show("Delete Term?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (deleteDialogResult == DialogResult.Yes)
+                {
+                    dgvTerm.Rows.RemoveAt(e.RowIndex);
+                }
+            }
         }
     }
 }

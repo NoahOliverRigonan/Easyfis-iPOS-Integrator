@@ -1,3 +1,51 @@
 ﻿{
-
+  "ConnectionString": {
+    "DataSource": "",
+    "InitialCatalogDB": "",
+    "User": "",
+    "Password": ""
+  },
+  "CurrentUser": "",
+  "CloudSettings": {
+    "APIURLHost": ""
+  },
+  "Defaults": {
+    "BranchCode": "",
+    "PostSupplier": "",
+    "PostUser": ""
+  },
+  "JSONPath": {
+    "MasterFiles": "",
+    "ItemPrice": "",
+    "StockIn": "",
+    "StockOut": "",
+    "ReceivingReceipt": "",
+    "SalesInvoice": ""
+  },
+  "MapTables": {
+    "MstDiscount": [
+      {
+        "Discount": "",
+        "MapDiscount": ""
+      }
+    ],
+    "MstTax": [
+      {
+        "Tax": "",
+        "MapTax": ""
+      }
+    ],
+    "MstUnit": [
+      {
+        "Unit": "",
+        "MapUnit": ""
+      }
+    ],
+    "MstTerm": [
+      {
+        "Term": "",
+        "MapTerm": ""
+      }
+    ]
+  }
 }

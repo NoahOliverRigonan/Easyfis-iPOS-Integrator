@@ -13,37 +13,37 @@ using System.Windows.Forms;
 
 namespace EasyfisInnosoftPOSIntegrator
 {
-    public partial class DiscountDetailForm : Form
+    public partial class UnitDetailForm : Form
     {
         public Data.pos13dbDataContext db = new Data.pos13dbDataContext();
         public SettingsForm settingsForm;
 
-        public DiscountDetailForm(SettingsForm form)
+        public UnitDetailForm(SettingsForm form)
         {
             InitializeComponent();
 
             settingsForm = form;
-            CreateDiscountComboBox();
+            CreateUnitComboBox();
         }
 
-        public void CreateDiscountComboBox()
+        public void CreateUnitComboBox()
         {
-            var discounts = from d in db.MstDiscounts
-                            select d;
+            var units = from d in db.MstUnits
+                        select d;
 
-            if (discounts.Any())
+            if (units.Any())
             {
-                cboDiscount.DataSource = discounts.ToList();
-                cboDiscount.DisplayMember = "Discount";
-                cboDiscount.DropDownStyle = ComboBoxStyle.DropDownList;
+                cboUnit.DataSource = units.ToList();
+                cboUnit.DisplayMember = "Unit";
+                cboUnit.DropDownStyle = ComboBoxStyle.DropDownList;
 
-                CreateMapDiscountComboBox();
+                CreateMapUnitComboBox();
             }
         }
 
-        public void CreateMapDiscountComboBox()
+        public void CreateMapUnitComboBox()
         {
-            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create("http://localhost:2651/api/innosoftPOSIntegration/discount/list");
+            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create("http://localhost:2651/api/innosoftPOSIntegration/unit/list");
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "GET";
 
@@ -53,17 +53,17 @@ namespace EasyfisInnosoftPOSIntegrator
                 var result = streamReader.ReadToEnd();
 
                 JavaScriptSerializer javaScriptSerializer = new JavaScriptSerializer();
-                List<Entities.MstDiscount> discounts = (List<Entities.MstDiscount>)javaScriptSerializer.Deserialize(result, typeof(List<Entities.MstDiscount>));
+                List<Entities.MstUnit> units = (List<Entities.MstUnit>)javaScriptSerializer.Deserialize(result, typeof(List<Entities.MstUnit>));
 
-                cboMapDiscount.DataSource = discounts.ToList();
-                cboMapDiscount.DisplayMember = "Discount";
-                cboMapDiscount.DropDownStyle = ComboBoxStyle.DropDownList;
+                cboMapUnit.DataSource = units.ToList();
+                cboMapUnit.DisplayMember = "Unit";
+                cboMapUnit.DropDownStyle = ComboBoxStyle.DropDownList;
             }
         }
 
         private void btnSaveDiscount_Click(object sender, EventArgs e)
         {
-            settingsForm.RefreshDiscountDataGrid(cboDiscount.Text, cboMapDiscount.Text);
+            settingsForm.RefreshUnitDataGrid(cboUnit.Text, cboMapUnit.Text);
             Hide();
         }
 

@@ -45,6 +45,9 @@
             this.tabJSONFilesPath = new System.Windows.Forms.TabPage();
             this.button13 = new System.Windows.Forms.Button();
             this.grdActivityLog = new System.Windows.Forms.DataGridView();
+            this.FileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FileNotificationMessage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -69,16 +72,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtMasterFilesJSONPath = new System.Windows.Forms.Label();
-            this.button15 = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.FileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FileNotificationMessage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlHeaderTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEasyfisLogo)).BeginInit();
@@ -163,7 +162,6 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.button15);
             this.splitContainer1.Panel2.Controls.Add(this.btnLogout);
             this.splitContainer1.Panel2.Controls.Add(this.btnSettings);
             this.splitContainer1.Size = new System.Drawing.Size(1178, 547);
@@ -311,6 +309,21 @@
             this.grdActivityLog.RowTemplate.Height = 24;
             this.grdActivityLog.Size = new System.Drawing.Size(968, 441);
             this.grdActivityLog.TabIndex = 3;
+            // 
+            // FileName
+            // 
+            this.FileName.HeaderText = "File";
+            this.FileName.Name = "FileName";
+            // 
+            // FilePath
+            // 
+            this.FilePath.HeaderText = "Path";
+            this.FilePath.Name = "FilePath";
+            // 
+            // FileNotificationMessage
+            // 
+            this.FileNotificationMessage.HeaderText = "Message";
+            this.FileNotificationMessage.Name = "FileNotificationMessage";
             // 
             // button11
             // 
@@ -575,22 +588,6 @@
             this.txtMasterFilesJSONPath.TabIndex = 18;
             this.txtMasterFilesJSONPath.Text = "Master Files";
             // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button15.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button15.Location = new System.Drawing.Point(3, 436);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(172, 51);
-            this.button15.TabIndex = 2;
-            this.button15.Text = "Switch Account";
-            this.button15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button15.UseVisualStyleBackColor = false;
-            // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.IndianRed;
@@ -599,7 +596,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(3, 493);
+            this.btnLogout.Location = new System.Drawing.Point(3, 138);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(172, 51);
             this.btnLogout.TabIndex = 1;
@@ -666,21 +663,6 @@
             this.label11.Size = new System.Drawing.Size(94, 20);
             this.label11.TabIndex = 7;
             this.label11.Text = "Connected";
-            // 
-            // FileName
-            // 
-            this.FileName.HeaderText = "File";
-            this.FileName.Name = "FileName";
-            // 
-            // FilePath
-            // 
-            this.FilePath.HeaderText = "Path";
-            this.FilePath.Name = "FilePath";
-            // 
-            // FileNotificationMessage
-            // 
-            this.FileNotificationMessage.HeaderText = "Message";
-            this.FileNotificationMessage.Name = "FileNotificationMessage";
             // 
             // MainForm
             // 
@@ -769,7 +751,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnHide;
         private System.Windows.Forms.Label label11;
